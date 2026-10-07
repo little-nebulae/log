@@ -169,9 +169,18 @@ importers:
       '@arethetypeswrong/core':
         specifier: 0.18.5
         version: 0.18.5
+      '@little-nebulae/error':
+        specifier: 1.3.0
+        version: 1.3.0(type-fest@5.10.0)
+      '@little-nebulae/json':
+        specifier: 0.2.0
+        version: 0.2.0(@little-nebulae/error@1.3.0(type-fest@5.10.0))(@little-nebulae/result@1.3.0)(type-fest@5.10.0)
       '@little-nebulae/number-types':
         specifier: 0.1.0
         version: 0.1.0(@little-nebulae/utility-types@0.3.0(type-fest@5.10.0))(type-fest@5.10.0)(typia@15.1.0)
+      '@little-nebulae/result':
+        specifier: 1.3.0
+        version: 1.3.0
       '@little-nebulae/string-types':
         specifier: 0.3.0
         version: 0.3.0(type-fest@5.10.0)(typia@15.1.0)
@@ -234,12 +243,27 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
+  '@little-nebulae/error@1.3.0':
+    resolution: {integrity: sha512-TQdcFdPHu3jxJiinmIv2zKVrMeDC9jpzQ1OIoZEZRI8TPLwIpU8cls+98rjSfQLlzsWcm/VPHzAm10yo744R9Q==}
+    peerDependencies:
+      type-fest: ^5.0.0
+
+  '@little-nebulae/json@0.2.0':
+    resolution: {integrity: sha512-WOME0HBs7Cft/41XckS4TBY76GSNWzNRAdhLLp/9vEk8FVOiSXXI+fANWpOhraURZaetj0u00D3rONDv/pq0IA==}
+    peerDependencies:
+      '@little-nebulae/error': ^1.3.0
+      '@little-nebulae/result': ^1.3.0
+      type-fest: ^5.0.0
+
   '@little-nebulae/number-types@0.1.0':
     resolution: {integrity: sha512-/yOaxyiOQM1sVKnLc3/0VIc8aJboK8iJ7i1XAOnGCamdsWngIpGscEgWkDIL7wKoVzcXeY/t/LN89Hqs0TBxFQ==}
     peerDependencies:
       '@little-nebulae/utility-types': ^0.3.0
       type-fest: ^5.0.0
       typia: ^15.0.0
+
+  '@little-nebulae/result@1.3.0':
+    resolution: {integrity: sha512-is5pMI8ccVbEwzWSFb49+3E6zp4tRzJ+dABw/XCA7ePhUd9OfgmLCl6kCqPsmDyD4Rp1BndFbZz8hZhGmfGQcw==}
 
   '@little-nebulae/string-types@0.3.0':
     resolution: {integrity: sha512-YXGmWEdgNNFxisSj/O6RdIBqkc8jFJ0PlWKbjvrtl5tqSLC5OO5mRbspxgz9Fa4UeonvWmf01dEMPARSvMk/jw==}
@@ -943,6 +967,10 @@ packages:
   cjs-module-lexer@1.4.3:
     resolution: {integrity: sha512-9z8TZaGM1pfswYeXrUpzPrkx8UnWYdhJclsiYMm6x/w5+nN+8Tf/LnAgfLGQCm59qAOxU8WwHEq2vNwF6i4j+Q==}
 
+  copy-anything@4.1.5:
+    resolution: {integrity: sha512-vePst2VLTSqPglW7Q98VwFpGiGpOHTyXIo81MO5VyLecA5zMbZw/P/V1vmwD1jksa2iJpn/YkDrJ3XhTfzUyhQ==}
+    engines: {node: '>=18'}
+
   defu@6.1.7:
     resolution: {integrity: sha512-7z22QmUWiQ/2d0KkdYmANbRUVABpZ9SNYyH5vx6PZ+nE5bcC0l7uFvEfHlyld/HcGBFTL536ClDt3DEcSlEJAQ==}
 
@@ -1209,6 +1237,10 @@ packages:
   std-env@4.3.0:
     resolution: {integrity: sha512-OtU/EgQ1kIm5KwqQpBC6ZEMXrZRui11w8zgfTWp8cdO9B8OaPsbA8bTHO2P+HNo1VlUTGMVBwPhydu6poeXiag==}
 
+  superjson@2.2.6:
+    resolution: {integrity: sha512-H+ue8Zo4vJmV2nRjpx86P35lzwDT3nItnIsocgumgr0hHMQ+ZGq5vrERg9kJBo5AWGmxZDhzDo+WVIJqkB0cGA==}
+    engines: {node: '>=16'}
+
   tagged-tag@1.0.0:
     resolution: {integrity: sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng==}
     engines: {node: '>=20'}
@@ -1427,11 +1459,24 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
+  '@little-nebulae/error@1.3.0(type-fest@5.10.0)':
+    dependencies:
+      type-fest: 5.10.0
+
+  '@little-nebulae/json@0.2.0(@little-nebulae/error@1.3.0(type-fest@5.10.0))(@little-nebulae/result@1.3.0)(type-fest@5.10.0)':
+    dependencies:
+      '@little-nebulae/error': 1.3.0(type-fest@5.10.0)
+      '@little-nebulae/result': 1.3.0
+      superjson: 2.2.6
+      type-fest: 5.10.0
+
   '@little-nebulae/number-types@0.1.0(@little-nebulae/utility-types@0.3.0(type-fest@5.10.0))(type-fest@5.10.0)(typia@15.1.0)':
     dependencies:
       '@little-nebulae/utility-types': 0.3.0(type-fest@5.10.0)
       type-fest: 5.10.0
       typia: 15.1.0
+
+  '@little-nebulae/result@1.3.0': {}
 
   '@little-nebulae/string-types@0.3.0(type-fest@5.10.0)(typia@15.1.0)':
     dependencies:
@@ -1809,6 +1854,8 @@ snapshots:
 
   cjs-module-lexer@1.4.3: {}
 
+  copy-anything@4.1.5: {}
+
   defu@6.1.7: {}
 
   detect-libc@2.1.2: {}
@@ -2037,6 +2084,10 @@ snapshots:
   source-map-js@1.2.2: {}
 
   std-env@4.3.0: {}
+
+  superjson@2.2.6:
+    dependencies:
+      copy-anything: 4.1.5
 
   tagged-tag@1.0.0: {}
 
