@@ -172,6 +172,9 @@ importers:
       '@little-nebulae/number-types':
         specifier: 0.1.0
         version: 0.1.0(@little-nebulae/utility-types@0.3.0(type-fest@5.10.0))(type-fest@5.10.0)(typia@15.1.0)
+      '@little-nebulae/string-types':
+        specifier: 0.3.0
+        version: 0.3.0(type-fest@5.10.0)(typia@15.1.0)
       '@little-nebulae/utility-types':
         specifier: 0.3.0
         version: 0.3.0(type-fest@5.10.0)
@@ -235,6 +238,12 @@ packages:
     resolution: {integrity: sha512-/yOaxyiOQM1sVKnLc3/0VIc8aJboK8iJ7i1XAOnGCamdsWngIpGscEgWkDIL7wKoVzcXeY/t/LN89Hqs0TBxFQ==}
     peerDependencies:
       '@little-nebulae/utility-types': ^0.3.0
+      type-fest: ^5.0.0
+      typia: ^15.0.0
+
+  '@little-nebulae/string-types@0.3.0':
+    resolution: {integrity: sha512-YXGmWEdgNNFxisSj/O6RdIBqkc8jFJ0PlWKbjvrtl5tqSLC5OO5mRbspxgz9Fa4UeonvWmf01dEMPARSvMk/jw==}
+    peerDependencies:
       type-fest: ^5.0.0
       typia: ^15.0.0
 
@@ -1421,6 +1430,11 @@ snapshots:
   '@little-nebulae/number-types@0.1.0(@little-nebulae/utility-types@0.3.0(type-fest@5.10.0))(type-fest@5.10.0)(typia@15.1.0)':
     dependencies:
       '@little-nebulae/utility-types': 0.3.0(type-fest@5.10.0)
+      type-fest: 5.10.0
+      typia: 15.1.0
+
+  '@little-nebulae/string-types@0.3.0(type-fest@5.10.0)(typia@15.1.0)':
+    dependencies:
       type-fest: 5.10.0
       typia: 15.1.0
 

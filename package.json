@@ -28,6 +28,7 @@
   "devDependencies": {
     "@arethetypeswrong/core": "0.18.5",
     "@little-nebulae/number-types": "0.1.0",
+    "@little-nebulae/string-types": "0.3.0",
     "@little-nebulae/utility-types": "0.3.0",
     "@ttsc/paths": "0.30.4",
     "@types/node": "26.6.4",
@@ -43,6 +44,7 @@
   },
   "peerDependencies": {
     "@little-nebulae/number-types": "^0.1.0",
+    "@little-nebulae/string-types": "^0.3.0",
     "@little-nebulae/utility-types": "^0.3.0",
     "type-fest": "^5.0.0",
     "typia": "^15.0.0"
