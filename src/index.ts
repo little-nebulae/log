@@ -1,1 +1,1 @@
-export type { Performance } from "@/types/performance";
+export type * from "@/types/perf";
