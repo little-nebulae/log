@@ -27,6 +27,8 @@
   },
   "devDependencies": {
     "@arethetypeswrong/core": "0.18.5",
+    "@little-nebulae/number-types": "0.1.0",
+    "@little-nebulae/utility-types": "0.3.0",
     "@ttsc/paths": "0.30.4",
     "@types/node": "26.6.4",
     "oxfmt": "0.72.0",
@@ -36,10 +38,14 @@
     "tsdown": "0.23.0",
     "type-fest": "5.10.0",
     "typescript": "7.0.2",
+    "typia": "15.1.0",
     "vitest": "5.0.3"
   },
   "peerDependencies": {
-    "type-fest": "^5.0.0"
+    "@little-nebulae/number-types": "^0.1.0",
+    "@little-nebulae/utility-types": "^0.3.0",
+    "type-fest": "^5.0.0",
+    "typia": "^15.0.0"
   },
   "devEngines": {
     "packageManager": {
