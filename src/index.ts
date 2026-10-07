@@ -1,2 +1,1 @@
-export type * from "@/types/perf";
-export type * from "@/types/operation";
+export type * from "@/types";
