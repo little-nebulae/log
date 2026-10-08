@@ -3,6 +3,13 @@ savePrefix: ""
 virtualStoreType: global
 allowBuilds:
   esbuild: true
+packageExtensions:
+  "pino":
+    peerDependencies:
+      "@types/node": "*"
+    peerDependenciesMeta:
+      "@types/node":
+        optional: true
 
 # Supply chain attack mitigation
 minimumReleaseAge: 1440
