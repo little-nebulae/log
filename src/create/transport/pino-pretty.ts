@@ -3,9 +3,10 @@ import type { PrettyOptions } from "pino-pretty";
 import type { Except } from "type-fest";
 
 export const PINO_PRETTY_TRANSPORT_TARGET = "pino-pretty";
+export type PinoPrettyTransportTarget = typeof PINO_PRETTY_TRANSPORT_TARGET;
 
 export interface PinoPrettyTransportOptions extends TransportTargetOptions<PrettyOptions> {
-  target: typeof PINO_PRETTY_TRANSPORT_TARGET;
+  target: PinoPrettyTransportTarget;
 }
 
 export function createPinoPrettyTransport({
