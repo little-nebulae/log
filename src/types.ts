@@ -27,7 +27,7 @@ export interface SequentialOperations extends Operation {
   operations: (Operation | ConcurrentOperations)[];
 }
 
-export interface Context {
+export interface LogContext {
   who: NonEmptyString;
   didWhat: NonEmptyString;
   inWhere?: NonEmptyString;
@@ -36,6 +36,6 @@ export interface Context {
 
 export interface Log extends SequentialOperations {
   level: Level;
-  context: Context;
+  context: LogContext;
   message: NonEmptyString;
 }
