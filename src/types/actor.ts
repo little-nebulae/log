@@ -1,6 +1,10 @@
 import type { ValueOf } from "type-fest";
 
-import type { ACTOR_KIND, AUTHENTICATION_REQUIREMENT } from "@/constants";
+import type {
+  ACTOR_KIND,
+  AUTHENTICATION_REQUIREMENT,
+  AUTHORIZATION_REQUIREMENT,
+} from "@/constants";
 
 export type ActorKind = ValueOf<typeof ACTOR_KIND>;
 
@@ -13,6 +17,12 @@ export type AuthenticationState<
 > = Requirement extends typeof AUTHENTICATION_REQUIREMENT.NOT_REQUIRED
   ? { isRequired: false }
   : { isRequired: true; isAuthenticated: boolean };
+
+export type AuthorizationState<
+  Requirement extends ValueOf<typeof AUTHORIZATION_REQUIREMENT>,
+> = Requirement extends typeof AUTHORIZATION_REQUIREMENT.NOT_REQUIRED
+  ? { isRequired: false }
+  : { isRequired: true; isAuthorized: boolean };
 
 export type AuthState<IsRequired extends boolean> = IsRequired extends false
   ? { isRequired: IsRequired }
