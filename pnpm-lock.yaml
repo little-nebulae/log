@@ -171,6 +171,9 @@ importers:
       pino:
         specifier: 10.4.0
         version: 10.4.0(@types/node@26.6.4)
+      pino-abstract-transport:
+        specifier: 3.0.0
+        version: 3.0.0
       pino-pretty:
         specifier: 13.2.0
         version: 13.2.0
