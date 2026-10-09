@@ -24,7 +24,8 @@
     "check": "pnpm run lint && pnpm run fmt:check",
     "fix": "pnpm run lint:fix && pnpm run fmt",
     "test": "vitest run",
-    "try": "ttsx src/try.ts"
+    "try": "ttsx src/try.ts",
+    "try:tsx": "tsx src/try.ts"
   },
   "dependencies": {
     "pino": "10.4.0",
@@ -48,6 +49,7 @@
     "oxlint-tsgolint": "7.0.2003",
     "publint": "0.3.25",
     "tsdown": "0.23.0",
+    "tsx": "4.23.15",
     "ttsc": "0.30.4",
     "type-fest": "5.10.0",
     "typescript": "7.0.2",
