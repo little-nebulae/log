@@ -187,6 +187,9 @@ importers:
       '@little-nebulae/node-env':
         specifier: 0.3.0
         version: 0.3.0(type-fest@5.10.0)
+      '@little-nebulae/node-fs':
+        specifier: 0.1.1
+        version: 0.1.1(@little-nebulae/error@1.3.0(type-fest@5.10.0))(@little-nebulae/result@1.3.0)(@little-nebulae/system-error@2.0.1(@little-nebulae/error@1.3.0(type-fest@5.10.0))(type-fest@5.10.0))(type-fest@5.10.0)
       '@little-nebulae/number-types':
         specifier: 0.1.0
         version: 0.1.0(@little-nebulae/utility-types@0.3.0(type-fest@5.10.0))(type-fest@5.10.0)(typia@15.1.0)
@@ -272,6 +275,15 @@ packages:
     peerDependencies:
       type-fest: ^5.0.0
 
+  '@little-nebulae/node-fs@0.1.1':
+    resolution: {integrity: sha512-KmMm2cj54XmVG3TvkULoCcVAvCZlhISFAG/iKTAzAMPHdJYP1VoYbQ3irY3sMVwH2/JvTsD5NMIF1mwHVi8IDQ==}
+    engines: {node: ^24.0.0}
+    peerDependencies:
+      '@little-nebulae/error': ^1.3.0
+      '@little-nebulae/result': ^1.3.0
+      '@little-nebulae/system-error': ^2.0.1
+      type-fest: ^5.0.0
+
   '@little-nebulae/number-types@0.1.0':
     resolution: {integrity: sha512-/yOaxyiOQM1sVKnLc3/0VIc8aJboK8iJ7i1XAOnGCamdsWngIpGscEgWkDIL7wKoVzcXeY/t/LN89Hqs0TBxFQ==}
     peerDependencies:
@@ -287,6 +299,12 @@ packages:
     peerDependencies:
       type-fest: ^5.0.0
       typia: ^15.0.0
+
+  '@little-nebulae/system-error@2.0.1':
+    resolution: {integrity: sha512-8EZCh2E5/octRyFI8sIrHVG55U2YXlyC2MAxpARA/65kTfNPOOVG0ioK7f7+yqFY1IHN5DfxjY5YE/aa3bgTAw==}
+    peerDependencies:
+      '@little-nebulae/error': ^1.3.0
+      type-fest: ^5.0.0
 
   '@little-nebulae/utility-types@0.3.0':
     resolution: {integrity: sha512-5bDSuETy78v/5TRP1ZSnXfksz8cVpY0OJJMqZsBWvGuUcdCXuRKxNadAWqUH6i3T5hcFloND+ZR0J6qJMI9iNg==}
@@ -1613,6 +1631,13 @@ snapshots:
     dependencies:
       type-fest: 5.10.0
 
+  '@little-nebulae/node-fs@0.1.1(@little-nebulae/error@1.3.0(type-fest@5.10.0))(@little-nebulae/result@1.3.0)(@little-nebulae/system-error@2.0.1(@little-nebulae/error@1.3.0(type-fest@5.10.0))(type-fest@5.10.0))(type-fest@5.10.0)':
+    dependencies:
+      '@little-nebulae/error': 1.3.0(type-fest@5.10.0)
+      '@little-nebulae/result': 1.3.0
+      '@little-nebulae/system-error': 2.0.1(@little-nebulae/error@1.3.0(type-fest@5.10.0))(type-fest@5.10.0)
+      type-fest: 5.10.0
+
   '@little-nebulae/number-types@0.1.0(@little-nebulae/utility-types@0.3.0(type-fest@5.10.0))(type-fest@5.10.0)(typia@15.1.0)':
     dependencies:
       '@little-nebulae/utility-types': 0.3.0(type-fest@5.10.0)
@@ -1625,6 +1650,11 @@ snapshots:
     dependencies:
       type-fest: 5.10.0
       typia: 15.1.0
+
+  '@little-nebulae/system-error@2.0.1(@little-nebulae/error@1.3.0(type-fest@5.10.0))(type-fest@5.10.0)':
+    dependencies:
+      '@little-nebulae/error': 1.3.0(type-fest@5.10.0)
+      type-fest: 5.10.0
 
   '@little-nebulae/utility-types@0.3.0(type-fest@5.10.0)':
     dependencies:
