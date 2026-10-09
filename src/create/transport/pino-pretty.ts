@@ -1,11 +1,9 @@
 import type { NodeEnv } from "@little-nebulae/node-env";
-import type {
-  LevelWithSilent,
-  LevelWithSilentOrString,
-  TransportTargetOptions,
-} from "pino";
+import type { LevelWithSilent, TransportTargetOptions } from "pino";
 import type { PrettyOptions } from "pino-pretty";
 import type { Except } from "type-fest";
+
+import { resolveMinimumLevel } from "@/utils/resolve-minimum-level";
 
 export const PINO_PRETTY_TRANSPORT_LEVEL_ENV_KEY =
   "PINO_PRETTY_TRANSPORT_LEVEL";
@@ -33,20 +31,13 @@ export function createPinoPrettyTransport({
   options = {},
   env,
 }: CreatePinoPrettyTransportParams) {
-  let minimumLogLevel: LevelWithSilentOrString;
-  if (level !== undefined) {
-    minimumLogLevel = level;
-  } else if (env.PINO_PRETTY_TRANSPORT_LEVEL !== undefined) {
-    minimumLogLevel = env.PINO_PRETTY_TRANSPORT_LEVEL;
-  } else if (env.NODE_ENV === "development") {
-    minimumLogLevel = "debug";
-  } else {
-    minimumLogLevel = "warn";
-  }
-
   return {
     target: PINO_PRETTY_TRANSPORT_TARGET,
-    level: minimumLogLevel,
+    level: resolveMinimumLevel({
+      level,
+      levelEnv: env.PINO_PRETTY_TRANSPORT_LEVEL,
+      nodeEnv: env.NODE_ENV,
+    }),
     options,
   } satisfies PinoPrettyTransportOptions;
 }

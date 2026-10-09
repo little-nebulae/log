@@ -6,8 +6,8 @@ export function resolveMinimumLevel({
   levelEnv,
   nodeEnv,
 }: {
-  level?: LevelWithSilentOrString;
-  levelEnv?: LevelWithSilent;
+  level?: LevelWithSilentOrString | undefined;
+  levelEnv?: LevelWithSilent | undefined;
   nodeEnv: NodeEnvValue;
 }): LevelWithSilentOrString {
   if (level !== undefined) {
