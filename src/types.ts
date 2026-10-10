@@ -2,6 +2,7 @@ import type { EncodableValue } from "@little-nebulae/json";
 import type { PositiveInteger } from "@little-nebulae/number-types";
 import type { NonEmptyString, Uuid } from "@little-nebulae/string-types";
 import type { Level } from "pino";
+import type { StructuredCloneable } from "type-fest";
 
 export interface Perf {
   start: PositiveInteger;
@@ -39,3 +40,5 @@ export interface Log extends SequentialOperations {
   context: LogContext;
   message: NonEmptyString;
 }
+
+export type CreateTransportOptions<T extends StructuredCloneable> = T;
