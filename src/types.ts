@@ -41,4 +41,12 @@ export interface Log extends SequentialOperations {
   message: NonEmptyString;
 }
 
+export interface LoggedObject {
+  level: number;
+  time: PositiveInteger;
+  pid: PositiveInteger;
+  hostname: NonEmptyString;
+  log: Log;
+}
+
 export type CreateTransportOptions<T extends StructuredCloneable> = T;
