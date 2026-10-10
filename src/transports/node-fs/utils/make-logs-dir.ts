@@ -6,6 +6,6 @@ import { DEFAULT_LOGS_DIR_RELATIVE_PATH } from "@/transports/node-fs/constants";
 export async function makeLogsDir(cwd = process.cwd()) {
   const path = resolve(cwd, DEFAULT_LOGS_DIR_RELATIVE_PATH);
 
-  const makeResult = await makeDirectoryRecursively({ path });
-  return makeResult;
+  const result = await makeDirectoryRecursively({ path });
+  return result;
 }
