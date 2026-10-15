@@ -14,3 +14,9 @@ export const OperationSchema = z.object({
   performance: OperationPerformanceSchema,
 });
 export type Operation = z.infer<typeof OperationSchema>;
+
+export const ConcurrentOperationsSchema = z.object({
+  ...OperationSchema.shape,
+  operations: z.array(OperationSchema),
+});
+export type ConcurrentOperations = z.infer<typeof ConcurrentOperationsSchema>;
