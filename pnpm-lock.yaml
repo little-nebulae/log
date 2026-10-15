@@ -193,15 +193,9 @@ importers:
       '@little-nebulae/node-fs':
         specifier: 0.2.0
         version: 0.2.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(@little-nebulae/system-error@2.1.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(type-fest@5.10.0))(type-fest@5.10.0)
-      '@little-nebulae/number-types':
-        specifier: 0.1.0
-        version: 0.1.0(@little-nebulae/utility-types@0.3.0(type-fest@5.10.0))(type-fest@5.10.0)(typia@15.1.0)
       '@little-nebulae/result':
         specifier: 1.4.0
         version: 1.4.0
-      '@little-nebulae/string-types':
-        specifier: 0.3.0
-        version: 0.3.0(type-fest@5.10.0)(typia@15.1.0)
       '@little-nebulae/utility-types':
         specifier: 0.3.0
         version: 0.3.0(type-fest@5.10.0)
@@ -294,21 +288,8 @@ packages:
       '@little-nebulae/system-error': ^2.0.1
       type-fest: ^5.0.0
 
-  '@little-nebulae/number-types@0.1.0':
-    resolution: {integrity: sha512-/yOaxyiOQM1sVKnLc3/0VIc8aJboK8iJ7i1XAOnGCamdsWngIpGscEgWkDIL7wKoVzcXeY/t/LN89Hqs0TBxFQ==}
-    peerDependencies:
-      '@little-nebulae/utility-types': ^0.3.0
-      type-fest: ^5.0.0
-      typia: ^15.0.0
-
   '@little-nebulae/result@1.4.0':
     resolution: {integrity: sha512-ItjYTaBxSXQf1+bxL6hqpySq2oG+STTCrGLxnHAZKNRrxfVt6MoC0LZvxKaOKB/VNr0uNfKvX/cKHJiWDYb5ZQ==}
-
-  '@little-nebulae/string-types@0.3.0':
-    resolution: {integrity: sha512-YXGmWEdgNNFxisSj/O6RdIBqkc8jFJ0PlWKbjvrtl5tqSLC5OO5mRbspxgz9Fa4UeonvWmf01dEMPARSvMk/jw==}
-    peerDependencies:
-      type-fest: ^5.0.0
-      typia: ^15.0.0
 
   '@little-nebulae/system-error@2.1.0':
     resolution: {integrity: sha512-VyZt9lgYzyq9q7dznAqwD3Pm167HFumuTscCtajEQtfAIlay6rbd6/MB7/xPQt71HOyXzWxYKF/NDCi//KjlSQ==}
@@ -851,12 +832,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@typia/interface@15.1.0':
-    resolution: {integrity: sha512-kiKKWTAmJ8x48eUAkzTwH4AsX3CSe5AcsxGUkzkOqhqwlklxUWIACw93DXTr2F5aDIse3YBExJerWdgURsring==}
-
-  '@typia/utils@15.1.0':
-    resolution: {integrity: sha512-9NLCbKI2rQOA4M9EbEx0HwXfKIUIdkvO2J+6mZQttx2CBfiIspgt0VdJSvmD0hqMKa6LvDdmeBKl13wTizVGog==}
-
   '@vitest/mocker@5.0.4':
     resolution: {integrity: sha512-tqAlrYWce4iUxhr3ncNohejtCTOcHeE8XWrSNZY3OhPoDn01yeGv+gnaBy64ATp7o6pb03eIbBAjzmibpc9vIQ==}
     peerDependencies:
@@ -971,10 +946,6 @@ packages:
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
-
-  drange@1.1.1:
-    resolution: {integrity: sha512-pYxfDYpued//QpnLIm4Avk7rsNtAtQkUES2cwAYSvD/wd2pKD71gN2Ebj3e7klzXwjocvE8c5vx/1fxwpqmSxA==}
-    engines: {node: '>=4'}
 
   dts-resolver@3.0.0:
     resolution: {integrity: sha512-1T1f+z+4tl9XD+m+0HBgWoL/nm0bOIffyWaUuUSBlFg/86IWvfx+wjNaO/ybU0AJzG9/Mi5hBUgGV6zCmWEN7Q==}
@@ -1230,19 +1201,11 @@ packages:
   quick-format-unescaped@4.0.4:
     resolution: {integrity: sha512-tYC1Q1hgyRuHgloV/YXs2w15unPVh8qfu/qCTfhTYamaw7fyhumKa2yGpdSo87vY32rIclj+4fWYQXUMs9EHvg==}
 
-  randexp@0.5.3:
-    resolution: {integrity: sha512-U+5l2KrcMNOUPYvazA3h5ekF80FHTUG+87SEAmHZmolh1M+i/WyTCxVzmi+tidIa1tM4BSe8g2Y/D3loWDjj+w==}
-    engines: {node: '>=4'}
-
   real-require@1.0.0:
     resolution: {integrity: sha512-P4nbQYQfePJxRSmY+v/KINxVucm4NF3p3s7pJveMTtom52FR4YGltUQLB8idDXwDDWW+eYrWDFbuzUnjoWHF7g==}
 
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
-
-  ret@0.2.2:
-    resolution: {integrity: sha512-M0b3YWQs7R3Z917WRQy1HHA7Ba7D8hvZg6UE5mLykJxQVE2ju0IXbGlaHPPlkY+WN7wFP+wUMXmBFA0aV6vYGQ==}
-    engines: {node: '>=4'}
 
   rolldown-plugin-dts@0.28.8:
     resolution: {integrity: sha512-FVhfqxorCWcc20BVT5eVRfRjzLLl6mgzjcMR4gSBf0K4oQMXT0qoHhhzfXy0L7y83fQy7Ug5ZDNk90xM3/LiCQ==}
@@ -1383,14 +1346,6 @@ packages:
     resolution: {integrity: sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==}
     engines: {node: '>=16.20.0'}
     hasBin: true
-
-  typia@15.1.0:
-    resolution: {integrity: sha512-EW+b8jxKrRU/Q0eJXFry53vL6LFRlAMsSvfhKq3hh4pLTiswBWJMs6g4AtNlCPGCYJ0WMbSEME2qqe8DM7PnHg==}
-    peerDependencies:
-      ttsc: '>=0.19.2'
-    peerDependenciesMeta:
-      ttsc:
-        optional: true
 
   unconfig-core@7.5.0:
     resolution: {integrity: sha512-Su3FauozOGP44ZmKdHy2oE6LPjk51M/TRRjHv2HNCWiDvfvCoxC2lno6jevMA91MYAdCdwP05QnWdWpSbncX/w==}
@@ -1570,18 +1525,7 @@ snapshots:
       '@little-nebulae/system-error': 2.1.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(type-fest@5.10.0)
       type-fest: 5.10.0
 
-  '@little-nebulae/number-types@0.1.0(@little-nebulae/utility-types@0.3.0(type-fest@5.10.0))(type-fest@5.10.0)(typia@15.1.0)':
-    dependencies:
-      '@little-nebulae/utility-types': 0.3.0(type-fest@5.10.0)
-      type-fest: 5.10.0
-      typia: 15.1.0
-
   '@little-nebulae/result@1.4.0': {}
-
-  '@little-nebulae/string-types@0.3.0(type-fest@5.10.0)(typia@15.1.0)':
-    dependencies:
-      type-fest: 5.10.0
-      typia: 15.1.0
 
   '@little-nebulae/system-error@2.1.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(type-fest@5.10.0)':
     dependencies:
@@ -1867,12 +1811,6 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  '@typia/interface@15.1.0': {}
-
-  '@typia/utils@15.1.0':
-    dependencies:
-      '@typia/interface': 15.1.0
-
   '@vitest/mocker@5.0.4(vite@8.3.4(@types/node@26.6.5))':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
@@ -1939,8 +1877,6 @@ snapshots:
   defu@6.1.7: {}
 
   detect-libc@2.1.2: {}
-
-  drange@1.1.1: {}
 
   dts-resolver@3.0.0: {}
 
@@ -2176,16 +2112,9 @@ snapshots:
 
   quick-format-unescaped@4.0.4: {}
 
-  randexp@0.5.3:
-    dependencies:
-      drange: 1.1.1
-      ret: 0.2.2
-
   real-require@1.0.0: {}
 
   resolve-pkg-maps@1.0.0: {}
-
-  ret@0.2.2: {}
 
   rolldown-plugin-dts@0.28.8(rolldown@1.2.13)(typescript@7.0.2):
     dependencies:
@@ -2322,12 +2251,6 @@ snapshots:
       '@typescript/typescript-sunos-x64': 7.0.2
       '@typescript/typescript-win32-arm64': 7.0.2
       '@typescript/typescript-win32-x64': 7.0.2
-
-  typia@15.1.0:
-    dependencies:
-      '@typia/interface': 15.1.0
-      '@typia/utils': 15.1.0
-      randexp: 0.5.3
 
   unconfig-core@7.5.0:
     dependencies:
