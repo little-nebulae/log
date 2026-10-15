@@ -1,4 +1,4 @@
-import type { NodeEnvValue } from "@little-nebulae/node-env";
+import type { NodeEnv } from "@little-nebulae/node-env";
 import type { LevelWithSilent, LevelWithSilentOrString } from "pino";
 
 export function resolveMinimumLevel({
@@ -8,7 +8,7 @@ export function resolveMinimumLevel({
 }: {
   level?: LevelWithSilentOrString | undefined;
   levelEnv?: LevelWithSilent | undefined;
-  nodeEnv: NodeEnvValue;
+  nodeEnv: NodeEnv["NODE_ENV"];
 }): LevelWithSilentOrString {
   if (level !== undefined) {
     return level;
