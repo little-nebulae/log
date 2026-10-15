@@ -20,3 +20,9 @@ export const ConcurrentOperationsSchema = z.object({
   operations: z.array(OperationSchema),
 });
 export type ConcurrentOperations = z.infer<typeof ConcurrentOperationsSchema>;
+
+export const SequentialOperationsSchema = z.object({
+  ...OperationSchema.shape,
+  operations: z.array(z.union([OperationSchema, ConcurrentOperationsSchema])),
+});
+export type SequentialOperations = z.infer<typeof SequentialOperationsSchema>;
