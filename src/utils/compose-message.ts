@@ -1,10 +1,8 @@
-import type { NonEmptyString } from "@little-nebulae/string-types";
-import type { Level } from "pino";
-
-import type { LogContext } from "@/types";
+import type { LogContext } from "@/schemas/log/context";
+import type { LogLevel } from "@/schemas/log/level";
 
 interface ComposeLogMessageParams extends LogContext {
-  level: Level;
+  level: LogLevel;
 }
 export function composeLogMessage({
   level,
@@ -13,5 +11,5 @@ export function composeLogMessage({
   inWhere,
   atWhen,
 }: ComposeLogMessageParams) {
-  return `[${level.toUpperCase()}] ${who} ${didWhat}${inWhere ? " " + inWhere : ""} ${atWhen.toISOString()}.` as NonEmptyString;
+  return `[${level.toUpperCase()}] ${who} ${didWhat}${inWhere ? " " + inWhere : ""} ${atWhen.toISOString()}.`;
 }
