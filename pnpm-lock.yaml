@@ -186,7 +186,7 @@ importers:
         version: 1.4.0(type-fest@5.10.0)
       '@little-nebulae/json':
         specifier: 0.5.1
-        version: 0.5.1(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(@little-nebulae/zod@0.4.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7))(type-fest@5.10.0)(zod@4.6.7)
+        version: 0.5.1(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(@little-nebulae/zod@0.5.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7))(type-fest@5.10.0)(zod@4.6.7)
       '@little-nebulae/node-env':
         specifier: 0.4.0
         version: 0.4.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(@little-nebulae/system-error@2.1.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(type-fest@5.10.0))(type-fest@5.10.0)(zod@4.6.7)
@@ -200,8 +200,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0(type-fest@5.10.0)
       '@little-nebulae/zod':
-        specifier: 0.4.0
-        version: 0.4.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7)
+        specifier: 0.5.0
+        version: 0.5.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7)
       '@types/node':
         specifier: 26.6.5
         version: 26.6.5
@@ -303,13 +303,13 @@ packages:
     peerDependencies:
       type-fest: ^5.0.0
 
-  '@little-nebulae/zod@0.4.0':
-    resolution: {integrity: sha512-UC+o/vbQ/xRqwpDJUonqpsc96MRR3i73mmGefxQXboEXaKedzkV39WZAt2OjM4y7G9UsAJkdsNjk4PaD/ePkxw==}
+  '@little-nebulae/zod@0.5.0':
+    resolution: {integrity: sha512-hNAVizvexRmGHlDWZvv7WtC9Tu5jsOQzOvjD7hG6LK260v9RNWt1XnxA4X9IkRbp4S4I2IALmloOyAxqqzyisg==}
     peerDependencies:
-      '@little-nebulae/error': ^1.4.0
-      '@little-nebulae/result': ^1.4.0
+      '@little-nebulae/error': ^1.0.0
+      '@little-nebulae/result': ^1.0.0
       type-fest: ^5.0.0
-      zod: ^4.6.0
+      zod: ^4.0.0
 
   '@loaderkit/resolve@1.0.6':
     resolution: {integrity: sha512-G8FdIoF5CypfwmD9rl8BXod5HDn8JqB0CCNBXDTaRZ+yRYhARrrSToX1zg1zy9jX3zLqigsELwhT4gNtkdQAUg==}
@@ -1502,11 +1502,11 @@ snapshots:
     dependencies:
       type-fest: 5.10.0
 
-  '@little-nebulae/json@0.5.1(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(@little-nebulae/zod@0.4.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7))(type-fest@5.10.0)(zod@4.6.7)':
+  '@little-nebulae/json@0.5.1(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(@little-nebulae/zod@0.5.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7))(type-fest@5.10.0)(zod@4.6.7)':
     dependencies:
       '@little-nebulae/error': 1.4.0(type-fest@5.10.0)
       '@little-nebulae/result': 1.4.0
-      '@little-nebulae/zod': 0.4.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7)
+      '@little-nebulae/zod': 0.5.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7)
       type-fest: 5.10.0
       zod: 4.6.7
 
@@ -1536,7 +1536,7 @@ snapshots:
     dependencies:
       type-fest: 5.10.0
 
-  '@little-nebulae/zod@0.4.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7)':
+  '@little-nebulae/zod@0.5.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(type-fest@5.10.0)(zod@4.6.7)':
     dependencies:
       '@little-nebulae/error': 1.4.0(type-fest@5.10.0)
       '@little-nebulae/result': 1.4.0
