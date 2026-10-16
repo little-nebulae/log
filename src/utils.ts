@@ -1,5 +1,4 @@
-import type { LogContext } from "@/schemas/log/context";
-import type { LogLevel } from "@/schemas/log/level";
+import type { LogContext, LogLevel } from "@/schemas/log";
 
 interface ComposeLogMessageParams extends LogContext {
   level: LogLevel;
