@@ -16,4 +16,8 @@ export const DEFAULT_MINIMUM_LOG_LEVEL = {
   PRODUCTION: LOG_LEVEL.WARN,
 } as const;
 
-export const DEFAULT_LOGS_DIR_NAME = "logs";
+export const DEFAULT_LOG_DIR_NAME = {
+  ROOT: "logs",
+  MAIN: "main-thread",
+  WORKER: "worker-threads",
+} as const;
