@@ -1,5 +1,3 @@
-import { NODE_ENV_VALUE } from "@little-nebulae/node-env";
-
 export const LOG_LEVEL = {
   INFO: "info",
   WARN: "warn",
@@ -14,10 +12,8 @@ export const LOG_LEVELS = [
 ] as const;
 
 export const DEFAULT_MINIMUM_LOG_LEVEL = {
-  [NODE_ENV_VALUE.DEVELOPMENT]: LOG_LEVEL.INFO,
-  [NODE_ENV_VALUE.TESTING]: LOG_LEVEL.INFO,
-  [NODE_ENV_VALUE.STAGING]: LOG_LEVEL.WARN,
-  [NODE_ENV_VALUE.PRODUCTION]: LOG_LEVEL.WARN,
+  DEVELOPMENT: LOG_LEVEL.INFO,
+  PRODUCTION: LOG_LEVEL.WARN,
 } as const;
 
 export const DEFAULT_LOGS_DIR_NAME = "logs";
