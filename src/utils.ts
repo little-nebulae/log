@@ -10,5 +10,5 @@ export function composeLogMessage({
   inWhere,
   atWhen,
 }: ComposeLogMessageParams) {
-  return `[${level.toUpperCase()}] ${who} ${didWhat}${inWhere ? " " + inWhere : ""} ${atWhen.toISOString()}.`;
+  return `[${level.toUpperCase()}] ${who} ${didWhat}${inWhere ? " " + inWhere : ""} ${new Date(atWhen).toISOString()}.`;
 }

@@ -1,6 +1,9 @@
 import type { Tagged } from "type-fest";
 
-import { NonEmptyStringSchema } from "@little-nebulae/zod";
+import {
+  NonEmptyStringSchema,
+  PositiveIntegerSchema,
+} from "@little-nebulae/zod";
 import { z } from "zod";
 
 import type { OperationId } from "@/schemas/operation";
@@ -18,7 +21,7 @@ export const LogContextSchema = z.object({
   who: NonEmptyStringSchema,
   didWhat: NonEmptyStringSchema,
   inWhere: NonEmptyStringSchema.exactOptional(),
-  atWhen: z.date(),
+  atWhen: PositiveIntegerSchema,
 });
 export type LogContext = z.infer<typeof LogContextSchema>;
 
