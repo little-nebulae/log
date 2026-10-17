@@ -21,7 +21,13 @@ export const OperationPerformanceSchema = z
   .refine(({ start, end }) => end > start);
 export type OperationPerformance = z.infer<typeof OperationPerformanceSchema>;
 
-export const OperationInputSchema = z.union([z.json(), SuperJSONResultSchema]);
+export const OperationInputSchema = z.object({
+  serialization: SuperJSONResultSchema,
+  validation: z.discriminatedUnion("success", [
+    z.object({ success: true }),
+    z.object({ success: false, error: NonEmptyStringSchema }),
+  ]),
+});
 export type OperationInput = z.infer<typeof OperationInputSchema>;
 
 export const OperationOutputSchema = OperationInputSchema;
