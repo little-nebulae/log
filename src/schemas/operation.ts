@@ -22,9 +22,9 @@ export const OperationPerformanceSchema = z
 export type OperationPerformance = z.infer<typeof OperationPerformanceSchema>;
 
 export const OperationInputSchema = z.discriminatedUnion("codec", [
-  z.object({ codec: "none", value: z.unknown() }),
+  z.object({ codec: z.literal("none"), value: z.unknown() }),
   z.object({
-    codec: "superjson",
+    codec: z.literal("superjson"),
     value: DetailedSuperJSONResultSchema<unknown>(),
   }),
 ]);
