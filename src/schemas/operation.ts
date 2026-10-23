@@ -1,6 +1,6 @@
 import type { Tagged } from "type-fest";
 
-import { SuperJSONResultSchema } from "@little-nebulae/superjson";
+import { DetailedSuperJSONResultSchema } from "@little-nebulae/superjson";
 import {
   NonEmptyStringSchema,
   PositiveIntegerSchema,
@@ -21,13 +21,13 @@ export const OperationPerformanceSchema = z
   .refine(({ start, end }) => end > start);
 export type OperationPerformance = z.infer<typeof OperationPerformanceSchema>;
 
-export const OperationInputSchema = z.object({
-  serialization: SuperJSONResultSchema,
-  validation: z.discriminatedUnion("success", [
-    z.object({ success: true }),
-    z.object({ success: false, error: NonEmptyStringSchema }),
-  ]),
-});
+export const OperationInputSchema = z.discriminatedUnion("codec", [
+  z.object({ codec: "none", value: z.unknown() }),
+  z.object({
+    codec: "superjson",
+    value: DetailedSuperJSONResultSchema<unknown>(),
+  }),
+]);
 export type OperationInput = z.infer<typeof OperationInputSchema>;
 
 export const OperationOutputSchema = OperationInputSchema;
