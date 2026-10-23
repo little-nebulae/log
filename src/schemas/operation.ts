@@ -4,7 +4,7 @@ import { SuperJSONResultSchema } from "@little-nebulae/superjson";
 import {
   NonEmptyStringSchema,
   PositiveIntegerSchema,
-} from "@little-nebulae/zod";
+} from "@little-nebulae/zod-schemas";
 import { z } from "zod";
 
 export type OperationId = Tagged<string, "OperationId">;

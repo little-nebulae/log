@@ -3,7 +3,7 @@ import type { Tagged } from "type-fest";
 import {
   NonEmptyStringSchema,
   PositiveIntegerSchema,
-} from "@little-nebulae/zod";
+} from "@little-nebulae/zod-schemas";
 import { z } from "zod";
 
 import type { OperationId } from "@/schemas/operation";
