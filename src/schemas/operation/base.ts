@@ -8,7 +8,7 @@ import { OperationIdSchema } from "@/schemas/operation/id";
 
 export const OperationBaseSchema = z.object({
   id: OperationIdSchema,
-  name: NonEmptyStringSchema,
+  name: z.string(),
   source: NonEmptyStringSchema,
   success: z.boolean(),
   input: z.unknown(),

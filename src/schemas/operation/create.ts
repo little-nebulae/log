@@ -1,5 +1,3 @@
-import type { NonEmptyString } from "type-fest";
-
 import { z } from "zod";
 
 import { OperationBaseSchema } from "@/schemas/operation/base";
@@ -46,7 +44,7 @@ export function createConcurrentOperationsSchema<
   outputSchema,
   operationsSchema,
 }: {
-  name: NonEmptyString<Name>;
+  name: Name;
   inputSchema: InputSchema;
   outputSchema: OutputSchema;
   operationsSchema: OperationsSchema;
