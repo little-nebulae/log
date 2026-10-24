@@ -24,19 +24,22 @@ export function createOperationSchema<
     output: outputSchema,
   });
 }
-export type OperationSchemaType<
+
+type OperationSchemaType<
   Name extends string = string,
   InputSchema extends z.ZodType = z.ZodType,
   OutputSchema extends z.ZodType = z.ZodType,
 > = ReturnType<typeof createOperationSchema<Name, InputSchema, OutputSchema>>;
 
+type OperationsSchemaType = z.ZodTuple<
+  readonly [OperationSchemaType, ...OperationSchemaType[]]
+>;
+
 export function createConcurrentOperationsSchema<
   Name extends string,
   InputSchema extends z.ZodType,
   OutputSchema extends z.ZodType,
-  OperationsSchema extends z.ZodTuple<
-    readonly [OperationSchemaType, ...OperationSchemaType[]]
-  >,
+  OperationsSchema extends OperationsSchemaType,
 >({
   name,
   inputSchema,
