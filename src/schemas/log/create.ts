@@ -42,3 +42,19 @@ export function createLogSchema<
     context: LogContextSchema,
   });
 }
+
+export type Log<
+  Name extends string,
+  InputSchema extends z.ZodType,
+  OutputSchema extends z.ZodType,
+  OperationsSchema extends z.ZodTuple<
+    readonly [
+      SingleOperationSchemaType | ConcurrentOperationsSchemaType,
+      ...(SingleOperationSchemaType | ConcurrentOperationsSchemaType)[],
+    ]
+  >,
+> = z.infer<
+  ReturnType<
+    typeof createLogSchema<Name, InputSchema, OutputSchema, OperationsSchema>
+  >
+>;
