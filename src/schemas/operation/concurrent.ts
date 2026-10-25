@@ -1,8 +1,8 @@
 import { z } from "zod";
 
-import type { SingleOperationSchemaType } from "@/schemas/operation/create/single";
+import type { SingleOperationSchemaType } from "@/schemas/operation/single";
 
-import { createSingleOperationSchema } from "@/schemas/operation/create/single";
+import { createSingleOperationSchema } from "@/schemas/operation/single";
 
 export function createConcurrentOperationsSchema<
   Name extends string,

@@ -1,11 +1,11 @@
 import { z } from "zod";
 
-import type { SequentialOperationsTuple } from "@/schemas/operation/create/sequential";
+import type { SequentialOperationsTuple } from "@/schemas/operation/sequential";
 
 import { LogContextSchema } from "@/schemas/log/context";
 import { LogIdSchema } from "@/schemas/log/id";
 import { LogLevelSchema } from "@/schemas/log/level";
-import { createSequentialOperationsSchema } from "@/schemas/operation/create/sequential";
+import { createSequentialOperationsSchema } from "@/schemas/operation/sequential";
 
 export function createLogSchema<
   Name extends string,
