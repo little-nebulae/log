@@ -5,16 +5,18 @@ import type { SingleOperationSchemaType } from "@/schemas/operation/create/singl
 
 import { createSingleOperationSchema } from "@/schemas/operation/create/single";
 
+export type SequentialOperationsTuple = z.ZodTuple<
+  readonly [
+    SingleOperationSchemaType | ConcurrentOperationsSchemaType,
+    ...(SingleOperationSchemaType | ConcurrentOperationsSchemaType)[],
+  ]
+>;
+
 export function createSequentialOperationsSchema<
   Name extends string,
   InputSchema extends z.ZodType,
   OutputSchema extends z.ZodType,
-  OperationsSchema extends z.ZodTuple<
-    readonly [
-      SingleOperationSchemaType | ConcurrentOperationsSchemaType,
-      ...(SingleOperationSchemaType | ConcurrentOperationsSchemaType)[],
-    ]
-  >,
+  OperationsSchema extends SequentialOperationsTuple,
 >({
   name,
   inputSchema,

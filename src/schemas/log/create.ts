@@ -1,7 +1,6 @@
 import { z } from "zod";
 
-import type { ConcurrentOperationsSchemaType } from "@/schemas/operation/create/concurrent";
-import type { SingleOperationSchemaType } from "@/schemas/operation/create/single";
+import type { SequentialOperationsTuple } from "@/schemas/operation/create/sequential";
 
 import { LogContextSchema } from "@/schemas/log/context";
 import { LogIdSchema } from "@/schemas/log/id";
@@ -12,12 +11,7 @@ export function createLogSchema<
   Name extends string,
   InputSchema extends z.ZodType,
   OutputSchema extends z.ZodType,
-  OperationsSchema extends z.ZodTuple<
-    readonly [
-      SingleOperationSchemaType | ConcurrentOperationsSchemaType,
-      ...(SingleOperationSchemaType | ConcurrentOperationsSchemaType)[],
-    ]
-  >,
+  OperationsSchema extends SequentialOperationsTuple,
 >({
   name,
   inputSchema,
@@ -47,12 +41,7 @@ export type Log<
   Name extends string,
   InputSchema extends z.ZodType,
   OutputSchema extends z.ZodType,
-  OperationsSchema extends z.ZodTuple<
-    readonly [
-      SingleOperationSchemaType | ConcurrentOperationsSchemaType,
-      ...(SingleOperationSchemaType | ConcurrentOperationsSchemaType)[],
-    ]
-  >,
+  OperationsSchema extends SequentialOperationsTuple,
 > = z.infer<
   ReturnType<
     typeof createLogSchema<Name, InputSchema, OutputSchema, OperationsSchema>
