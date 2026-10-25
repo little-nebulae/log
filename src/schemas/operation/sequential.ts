@@ -1,14 +1,14 @@
 import { z } from "zod";
 
+import type { OperationSchemaType } from "@/schemas/operation";
 import type { ConcurrentOperationsSchemaType } from "@/schemas/operation/concurrent";
-import type { SingleOperationSchemaType } from "@/schemas/operation/single";
 
-import { createSingleOperationSchema } from "@/schemas/operation/single";
+import { createOperationSchema } from "@/schemas/operation";
 
 export type SequentialOperationsTuple = z.ZodTuple<
   readonly [
-    SingleOperationSchemaType | ConcurrentOperationsSchemaType,
-    ...(SingleOperationSchemaType | ConcurrentOperationsSchemaType)[],
+    OperationSchemaType | ConcurrentOperationsSchemaType,
+    ...(OperationSchemaType | ConcurrentOperationsSchemaType)[],
   ]
 >;
 
@@ -28,7 +28,7 @@ export function createSequentialOperationsSchema<
   outputSchema: OutputSchema;
   operationsSchema: OperationsSchema;
 }) {
-  const SingleOperationSchema = createSingleOperationSchema({
+  const SingleOperationSchema = createOperationSchema({
     name,
     inputSchema,
     outputSchema,

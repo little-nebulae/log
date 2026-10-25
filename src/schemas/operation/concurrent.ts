@@ -1,15 +1,15 @@
 import { z } from "zod";
 
-import type { SingleOperationSchemaType } from "@/schemas/operation/single";
+import type { OperationSchemaType } from "@/schemas/operation";
 
-import { createSingleOperationSchema } from "@/schemas/operation/single";
+import { createOperationSchema } from "@/schemas/operation";
 
 export function createConcurrentOperationsSchema<
   Name extends string,
   InputSchema extends z.ZodType,
   OutputSchema extends z.ZodType,
   OperationsSchema extends z.ZodTuple<
-    readonly [SingleOperationSchemaType, ...SingleOperationSchemaType[]]
+    readonly [OperationSchemaType, ...OperationSchemaType[]]
   >,
 >({
   name,
@@ -22,7 +22,7 @@ export function createConcurrentOperationsSchema<
   outputSchema: OutputSchema;
   operationsSchema: OperationsSchema;
 }) {
-  const SingleOperationSchema = createSingleOperationSchema({
+  const SingleOperationSchema = createOperationSchema({
     name,
     inputSchema,
     outputSchema,
