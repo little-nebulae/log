@@ -38,10 +38,11 @@ export function createLogSchema<
 }
 
 export type Log<
-  Name extends string,
-  InputSchema extends z.ZodType,
-  OutputSchema extends z.ZodType,
-  OperationsSchema extends SequentialOperationsTuple,
+  Name extends string = string,
+  InputSchema extends z.ZodType = z.ZodType,
+  OutputSchema extends z.ZodType = z.ZodType,
+  OperationsSchema extends SequentialOperationsTuple =
+    SequentialOperationsTuple,
 > = z.infer<
   ReturnType<
     typeof createLogSchema<Name, InputSchema, OutputSchema, OperationsSchema>
