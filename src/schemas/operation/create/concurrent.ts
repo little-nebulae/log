@@ -2,7 +2,7 @@ import { z } from "zod";
 
 import type { SingleOperationSchemaType } from "@/schemas/operation/create/single";
 
-import { OperationBaseSchema } from "@/schemas/operation/base";
+import { createSingleOperationSchema } from "@/schemas/operation/create/single";
 
 export function createConcurrentOperationsSchema<
   Name extends string,
@@ -22,11 +22,13 @@ export function createConcurrentOperationsSchema<
   outputSchema: OutputSchema;
   operationsSchema: OperationsSchema;
 }) {
+  const SingleOperationSchema = createSingleOperationSchema({
+    name,
+    inputSchema,
+    outputSchema,
+  });
   return z.object({
-    ...OperationBaseSchema.shape,
-    name: z.literal(name),
-    input: inputSchema,
-    output: outputSchema,
+    ...SingleOperationSchema.shape,
     operations: operationsSchema,
   });
 }

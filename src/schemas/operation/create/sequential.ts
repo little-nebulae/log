@@ -3,7 +3,7 @@ import { z } from "zod";
 import type { ConcurrentOperationsSchemaType } from "@/schemas/operation/create/concurrent";
 import type { SingleOperationSchemaType } from "@/schemas/operation/create/single";
 
-import { OperationBaseSchema } from "@/schemas/operation/base";
+import { createSingleOperationSchema } from "@/schemas/operation/create/single";
 
 export function createSequentialOperationsSchema<
   Name extends string,
@@ -26,11 +26,13 @@ export function createSequentialOperationsSchema<
   outputSchema: OutputSchema;
   operationsSchema: OperationsSchema;
 }) {
+  const SingleOperationSchema = createSingleOperationSchema({
+    name,
+    inputSchema,
+    outputSchema,
+  });
   return z.object({
-    ...OperationBaseSchema.shape,
-    name: z.literal(name),
-    input: inputSchema,
-    output: outputSchema,
+    ...SingleOperationSchema.shape,
     operations: operationsSchema,
   });
 }
