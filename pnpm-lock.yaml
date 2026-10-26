@@ -169,15 +169,6 @@ importers:
       '@arethetypeswrong/core':
         specifier: 0.18.5
         version: 0.18.5
-      '@little-nebulae/error':
-        specifier: 1.4.0
-        version: 1.4.0(type-fest@5.10.0)
-      '@little-nebulae/result':
-        specifier: 1.4.0
-        version: 1.4.0
-      '@little-nebulae/superjson':
-        specifier: 0.3.0
-        version: 0.3.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(@little-nebulae/zod-schemas@0.2.0(type-fest@5.10.0)(zod@4.6.7))(type-fest@5.10.0)(zod@4.6.7)
       '@little-nebulae/zod-schemas':
         specifier: 0.2.0
         version: 0.2.0(type-fest@5.10.0)(zod@4.6.7)
@@ -236,23 +227,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@little-nebulae/error@1.4.0':
-    resolution: {integrity: sha512-BDAs57Lsce/yZ8W/TQwk0/5rZpuR7XwpZUQWGxT0ic+ch+T+03aqNQ00vz4SS1f3ulSIp6LmzLULlivM8hMMCQ==}
-    peerDependencies:
-      type-fest: ^5.0.0
-
-  '@little-nebulae/result@1.4.0':
-    resolution: {integrity: sha512-ItjYTaBxSXQf1+bxL6hqpySq2oG+STTCrGLxnHAZKNRrxfVt6MoC0LZvxKaOKB/VNr0uNfKvX/cKHJiWDYb5ZQ==}
-
-  '@little-nebulae/superjson@0.3.0':
-    resolution: {integrity: sha512-gW5OJngSrpYd41JUJUC2BHxOWruGwQmgMfeh9ovrqxceH5kBxR2Rs7/ucbt7vZb7ZeVZvJCicJfpMVpqlt8uPQ==}
-    peerDependencies:
-      '@little-nebulae/error': ^1.0.0
-      '@little-nebulae/result': ^1.0.0
-      '@little-nebulae/zod-schemas': '0'
-      type-fest: ^5.0.0
-      zod: ^4.0.0
 
   '@little-nebulae/zod-schemas@0.2.0':
     resolution: {integrity: sha512-QahrHRKjeShZPCXGAQuCms0fUWI1gWQUGTPbs5T+yeI8/ZllfxlX7Z20XhI3YXVnizza8L3FOwChMP74Z+43Vg==}
@@ -975,10 +949,6 @@ packages:
   cjs-module-lexer@1.4.3:
     resolution: {integrity: sha512-9z8TZaGM1pfswYeXrUpzPrkx8UnWYdhJclsiYMm6x/w5+nN+8Tf/LnAgfLGQCm59qAOxU8WwHEq2vNwF6i4j+Q==}
 
-  copy-anything@4.1.5:
-    resolution: {integrity: sha512-vePst2VLTSqPglW7Q98VwFpGiGpOHTyXIo81MO5VyLecA5zMbZw/P/V1vmwD1jksa2iJpn/YkDrJ3XhTfzUyhQ==}
-    engines: {node: '>=18'}
-
   defu@6.1.7:
     resolution: {integrity: sha512-7z22QmUWiQ/2d0KkdYmANbRUVABpZ9SNYyH5vx6PZ+nE5bcC0l7uFvEfHlyld/HcGBFTL536ClDt3DEcSlEJAQ==}
 
@@ -1127,10 +1097,6 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  non-error@0.1.0:
-    resolution: {integrity: sha512-TMB1uHiGsHRGv1uYclfhivcnf0/PdFp2pNqRxXjncaAsjYMoisaQJI+SSZCqRq+VliwRTC8tsMQfmrWjDMhkPQ==}
-    engines: {node: '>=20'}
-
   obug@3.0.0:
     resolution: {integrity: sha512-5vvB5+W7ePv+p3uqxi+RcW1XAzLW0/hxt3/4X4Lc4qHudzOhmBiBwOY6DRob4WnanAEGvNcLjF+KNOufrUoEQw==}
     engines: {node: '>=12.20.0'}
@@ -1230,20 +1196,12 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  serialize-error@13.0.2:
-    resolution: {integrity: sha512-G+YKwp9I6IvWMe5RlwqxdmTPIcq/G8HK/sU51gdV1XAJznYkRSTB0ph+zB9AfSxG0fx6xrqYA6i9HeIcHFTXow==}
-    engines: {node: '>=20'}
-
   source-map-js@1.2.2:
     resolution: {integrity: sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==}
     engines: {node: '>=0.10.0'}
 
   std-env@4.3.0:
     resolution: {integrity: sha512-OtU/EgQ1kIm5KwqQpBC6ZEMXrZRui11w8zgfTWp8cdO9B8OaPsbA8bTHO2P+HNo1VlUTGMVBwPhydu6poeXiag==}
-
-  superjson@2.2.6:
-    resolution: {integrity: sha512-H+ue8Zo4vJmV2nRjpx86P35lzwDT3nItnIsocgumgr0hHMQ+ZGq5vrERg9kJBo5AWGmxZDhzDo+WVIJqkB0cGA==}
-    engines: {node: '>=16'}
 
   tagged-tag@1.0.0:
     resolution: {integrity: sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng==}
@@ -1464,22 +1422,6 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
-
-  '@little-nebulae/error@1.4.0(type-fest@5.10.0)':
-    dependencies:
-      type-fest: 5.10.0
-
-  '@little-nebulae/result@1.4.0': {}
-
-  '@little-nebulae/superjson@0.3.0(@little-nebulae/error@1.4.0(type-fest@5.10.0))(@little-nebulae/result@1.4.0)(@little-nebulae/zod-schemas@0.2.0(type-fest@5.10.0)(zod@4.6.7))(type-fest@5.10.0)(zod@4.6.7)':
-    dependencies:
-      '@little-nebulae/error': 1.4.0(type-fest@5.10.0)
-      '@little-nebulae/result': 1.4.0
-      '@little-nebulae/zod-schemas': 0.2.0(type-fest@5.10.0)(zod@4.6.7)
-      serialize-error: 13.0.2
-      superjson: 2.2.6
-      type-fest: 5.10.0
-      zod: 4.6.7
 
   '@little-nebulae/zod-schemas@0.2.0(type-fest@5.10.0)(zod@4.6.7)':
     dependencies:
@@ -1885,8 +1827,6 @@ snapshots:
 
   cjs-module-lexer@1.4.3: {}
 
-  copy-anything@4.1.5: {}
-
   defu@6.1.7: {}
 
   detect-libc@2.1.2: {}
@@ -1978,8 +1918,6 @@ snapshots:
   mri@1.2.0: {}
 
   nanoid@3.3.20: {}
-
-  non-error@0.1.0: {}
 
   obug@3.0.0: {}
 
@@ -2105,18 +2043,9 @@ snapshots:
 
   semver@7.8.5: {}
 
-  serialize-error@13.0.2:
-    dependencies:
-      non-error: 0.1.0
-      type-fest: 5.10.0
-
   source-map-js@1.2.2: {}
 
   std-env@4.3.0: {}
-
-  superjson@2.2.6:
-    dependencies:
-      copy-anything: 4.1.5
 
   tagged-tag@1.0.0: {}
 
